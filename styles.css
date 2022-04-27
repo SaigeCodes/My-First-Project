@@ -66,9 +66,9 @@ h1 {
 }
 
 h2 {
-  color: rgb(56, 54, 54);
+  color: rgb(72, 71, 71);
   font-family: ui-rounded;
-  font-size: 30px;
+  font-size: 28px;
   position: absolute;
   padding: 20px 270px 28px 18px;
   width: 100%;
@@ -78,7 +78,7 @@ h2 {
   text-align: center;
 }
 h3 {
-  color: rgb(56, 54, 54);
+  color: rgb(129, 125, 125);
   font-family: Courier New, monospace;
   font-size: 25px;
   position: absolute;
@@ -97,7 +97,7 @@ h4 {
   color: rgb(129, 125, 125);
   padding: 25px 255px 28px 18px;
   width: 100%;
-  top: 31%;
+  top: 32%;
   left: 19%;
   margin: 0;
   text-align: center;
@@ -121,7 +121,7 @@ h4 {
   padding: 25px 255px 28px 18px;
   width: 100%;
   top: 40%;
-  left: 10%;
+  left: 9.3%;
   margin: 0;
   text-align: center;
 }
@@ -139,6 +139,7 @@ h6 {
 
 p {
   font-size: 13px;
+  color: rgb(129, 125, 125);
   font-family: ui-rounded;
   position: absolute;
   padding: 25px 255px 28px 18px;
@@ -151,170 +152,85 @@ p {
 
 .row {
   color: rgb(129, 125, 125);
-
+  font-size: 21px;
   position: absolute;
-  top: 60%;
-  left: 10%;
+  top: 57%;
+  left: 38%;
   margin: 0;
-  padding-left: 26%;
-  padding-bottom: 0;
-}
-
-hr {
-  border: rgb(129, 125, 125);
-  width: 30%;
-  position: absolute;
-  top: 62%;
-  left: 35%;
-}
-
-.vertical-1 {
-  border-left: 1px solid rgb(129, 125, 125);
-  height: 77px;
-  position: absolute;
-  top: 60%;
-  left: 40%;
-}
-
-.vertical-2 {
-  border-left: 1px solid rgb(129, 125, 125);
-  height: 77px;
-  position: absolute;
-  top: 60%;
-  left: 44.1%;
-}
-
-.vertical-3 {
-  border-left: 1px solid rgb(129, 125, 125);
-  height: 77px;
-  position: absolute;
-  top: 60%;
-  left: 48.2%;
-}
-
-.vertical-4 {
-  border-left: 1px solid rgb(129, 125, 125);
-  height: 77px;
-  position: absolute;
-  top: 60%;
-  left: 52.2%;
-}
-
-.vertical-5 {
-  border-left: 1px solid rgb(129, 125, 125);
-  height: 77px;
-  position: absolute;
-  top: 60%;
-  left: 56.3%;
-}
-
-.vertical-6 {
-  border-left: 1px solid rgb(129, 125, 125);
-  height: 77px;
-  position: absolute;
-  top: 60%;
-  left: 60.4%;
+  padding: 10px;
 }
 
 .temp1 {
-  position: absolute;
+  font-size: 12px;
   top: 65%;
-  left: -3.5%;
+  left: -0.1%;
 }
 
 .temp2 {
+  font-size: 12px;
   position: absolute;
   top: 65%;
-  left: 0.7%;
+  left: 4.6%;
 }
 
 .temp3 {
+  font-size: 12px;
   position: absolute;
   top: 65%;
-  left: 4.7%;
+  left: 9.5%;
 }
 
 .temp4 {
+  font-size: 12px;
   position: absolute;
   top: 65%;
-  left: 8.8%;
+  left: 14.3%;
 }
 
 .temp5 {
+  font-size: 12px;
   position: absolute;
   top: 65%;
-  left: 12.9%;
-}
-
-.temp6 {
-  position: absolute;
-  top: 65%;
-  left: 16.9%;
-}
-
-.temp7 {
-  position: absolute;
-  top: 65%;
-  left: 20.9%;
+  left: 18.5%;
 }
 
 .emoji1 {
   position: absolute;
-  font-size: 23px;
-  top: 60.5%;
-  left: -3.5%;
+  font-size: 22px;
+  top: 59%;
+  left: -0.3%;
 }
 
 .emoji2 {
   position: absolute;
   font-size: 23px;
-  top: 60.5%;
-  left: 0.7%;
+  top: 59%;
+  left: 4.5%;
 }
 
 .emoji3 {
   position: absolute;
   font-size: 23px;
-  top: 60.5%;
-  left: 4.7%;
+  top: 59%;
+  left: 9.4%;
 }
 
 .emoji4 {
   position: absolute;
   font-size: 23px;
-  top: 60.5%;
-  left: 8.8%;
+  top: 59%;
+  left: 14.2%;
 }
 
 .emoji5 {
   position: absolute;
   font-size: 23px;
-  top: 60.5%;
-  left: 12.9%;
-}
-
-.emoji6 {
-  position: absolute;
-  font-size: 23px;
-  top: 60.5%;
-  left: 16.9%;
-}
-
-.emoji7 {
-  position: absolute;
-  font-size: 23px;
-  top: 60.5%;
-  left: 20.9%;
+  top: 59%;
+  left: 18.2%;
 }
 
 footer {
   font-size: 11px;
   color: rgb(170, 168, 168);
-  position: absolute;
-  padding: 25px 255px 28px 18px;
-  width: 100%;
-  top: 75%;
-  left: 8.5%;
-  margin: 0;
   text-align: center;
 }
