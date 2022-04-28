@@ -2,16 +2,16 @@
   position: relative;
   width: 500px;
   height: 289.68px;
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  background: linear-gradient(to top, #fae1d5 0%, #a1ddf9 100%);
   margin: 144px auto;
 }
 .hexagon::before {
   bottom: 100%;
-  border-bottom: 134.34px solid #ace0f9;
+  border-bottom: 134.34px solid #a1ddf9;
 }
 .hexagon::after {
   top: 100%;
-  border-top: 134.34px solid #fff1eb;
+  border-top: 134.34px solid #fae1d5;
 }
 .hexagon::before,
 .hexagon::after {
@@ -117,13 +117,10 @@ h4 {
 }
 .units {
   position: absolute;
-  font-size: 14px;
-  padding: 25px 255px 28px 18px;
-  width: 100%;
-  top: 40%;
-  left: 9.3%;
-  margin: 0;
-  text-align: center;
+  font-size: 15px;
+  bottom: 53%;
+  left: 49.5%;
+  color: rgb(129, 125, 125);
 }
 
 h6 {
