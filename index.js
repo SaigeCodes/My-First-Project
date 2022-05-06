@@ -49,25 +49,6 @@ function convertToFahrenheit(event) {
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-// weather api
-
-function displayWeatherCondition(response) {
-  console.log(response.data);
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#temperature-description").innerHTML =
-    response.data.weather[0].description;
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  document.querySelector("#feels").innerHTML = Math.round(
-    response.data.main.feels_like
-  );
-}
-
 //Geolocation api
 
 function searchLocation(position) {
@@ -85,9 +66,33 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-//Displaying forecast
+//Displaying forecast// weather api
 
-function displayForecast() {
+function getForecast(coordinates) {
+  let apiKey = "ba1f7c269713d3f36f3b20c716194a21";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayWeatherCondition(response) {
+  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector("#temperature-description").innerHTML =
+    response.data.weather[0].description;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#feels").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
+  getForecast(response.data.coord);
+}
+
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
@@ -115,4 +120,4 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-displayForecast();
+displayForecast(response.data.daily);
