@@ -16,54 +16,81 @@
   </head>
   <body>
     <div class="container">
-      <div class="hexagon"></div>
-      <form class="search-form">
-        
-          <input
-            type="Search"
-            placeholder="Type a city..."
-            autofocus="on"
-            autocomplete="off"
-            class="form-control shadow-sm border-0"
-            id="search-text"
-          />
-       
+      <div class="hexagon">
+        <div class="hexagon-top">
+          <form class="search-form">
+            <button
+              class="btn btn-outline-dark mb-4"
+              id="current-location-button"
+            >
+              Current
+            </button>
+            <div class="row">
+              <div class="col-4 offset-3">
+                <input
+                  type="Search"
+                  placeholder="Type a city..."
+                  autofocus="on"
+                  autocomplete="off"
+                  class="form-control shadow-sm border-0"
+                  id="search-text"
+                />
+              </div>
+              <div class="col-2">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-outline-light"
+                />
+              </div>
+            </div>
+          </form>
         </div>
-
-        <input
-          type="submit"
-          value="Search"
-          class="btn btn-outline-light"
-        />
-
-        <button class="btn btn-outline-dark" id="current-location-button">
-          Current
-        </button>
-       </form>
-      <h1 id="city"></h1>
-      <h2 id="current_day"></h2>
-      <h3 id="current_time"></h3>
-      <h4 id="temperature-description"></h4>
-      <div class="float-left">
-        <span class="temperature" id="temperature">73</span
-        >
-        <span class="units" id="fahrenheit-link">°F
-        </span>
+        <div class="hexagon-center">
+          <div class="row align-items-center">
+            <div class="col-4">
+              <h2 id="current_day"></h2>
+              <h3 id="current_time"></h3>
+            </div>
+            <div class="col-4 text-center">
+              <img id="icon" src="" alt="" />
+            </div>
+            <div class="col-4">
+              <h1 id="city"></h1>
+              <h4 id="temperature-description"></h4>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-4 offset-4">
+              <div class="text-center">
+                <span class="temperature" id="temperature">73</span>
+                <span class="units" id="fahrenheit-link">°F </span>
+              </div>
+            </div>
+            <div class="col-4">
+              <p>
+                Wind: <span id="wind"></span> mph <br />
+                Humidity: <span id="humidity"></span> % <br />
+                Feels like: <span id="feels"></span>°
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="hexagon-bottom">
+          <div class="row">
+            <div class="offset-1 col-10">
+              <div class="weather-forecast" id="forecast"></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h6>⛅</h6>
-      <p>
-        Wind:  <span id="wind"></span> mph <br />
-        Humidity:  <span id="humidity"></span> %  <br />
-        Feels like:  <span id="feels"></span>°
-        
-      </p>
-
-  
- 
-<div class="weather-forecast" id="forecast"></div>
-
-   
+    </div>
+    <footer>
+      saigecodes <br />
+      <a href="https://github.com/SaigeCodes/My-First-Project" target="_blank"
+        >github</a
+      >
+    </footer>
     <script src="index.js"></script>
   </body>
-  <footer>saigecodes <br> <a href="https://github.com/SaigeCodes/My-First-Project" target="_blank">github</a> </footer>
 </html>

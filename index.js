@@ -30,10 +30,17 @@ function search(event) {
   } else {
     alert("Please type a city 😁");
   }
+
+  searchCity(city);
+}
+
+function searchCity(city) {
   let apiKey = "ba1f7c269713d3f36f3b20c716194a21";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(displayWeatherCondition);
 }
+
+searchCity("New York");
 
 let form = document.querySelector("form");
 form.addEventListener("submit", search);
@@ -88,6 +95,17 @@ function displayWeatherCondition(response) {
   document.querySelector("#feels").innerHTML = Math.round(
     response.data.main.feels_like
   );
+
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+
+  document
+    .querySelector("#icon")
+    .setAttribute("alt", response.data.weather[0].description);
   getForecast(response.data.coord);
 }
 
@@ -104,13 +122,13 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row row-cols-5">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
       forecastHTML =
         forecastHTML +
         `
-      <div class="col-2">
+      <div class="col">
         <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
         <img
           src="http://openweathermap.org/img/wn/${
@@ -135,4 +153,3 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-displayForecast(response.data.daily);
